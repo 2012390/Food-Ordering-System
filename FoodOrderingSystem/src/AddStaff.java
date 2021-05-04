@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  * @author MUHAMMAD FASEEH
  */
 public class AddStaff extends javax.swing.JFrame {
-private String name,cnic,age,designation,salary;
+private String name,id,age,designation,salary;
 public String getName(){
     return name;
 }
-public String getCnic(){
-    return cnic;
+public String getId(){
+    return id;
 }
 public String getAge(){
     return age;
@@ -34,8 +34,8 @@ public String getSalary(){
 public void setName(String name){
     this.name=name;
 }
-public void setCnic(String cnic){
-    this.cnic=cnic;
+public void setId(String id){
+    this.id=id;
 }
 public void setAge(String age){
     this.age=age;
@@ -109,7 +109,7 @@ public void setSalary(String salary){
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
         jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextPane1.setText("CNIC");
+        jTextPane1.setText("ID");
         jScrollPane1.setViewportView(jTextPane1);
 
         jTextPane3.setEditable(false);
@@ -162,17 +162,13 @@ public void setSalary(String salary){
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                         .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(30, 30, 30))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(75, 75, 75)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                             .addComponent(jTextField4)
@@ -233,13 +229,13 @@ public void setSalary(String salary){
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         name=jTextField1.getText();
-                cnic=jTextField2.getText();
+                id=jTextField2.getText();
                 age=jTextField3.getText();
                 designation=jTextField4.getText();
                 salary=jTextField5.getText(); 
               try{
                     connect c2=new connect();
-                    String employee = "insert into staff values('"+name+"','"+cnic+"','"+age+"','"+designation+"','"+salary+"')";
+                    String employee = "insert into Employee values('"+name+"','"+id+"','"+age+"','"+designation+"','"+salary+"')";
                c2.s.executeUpdate(employee);
                JOptionPane.showMessageDialog(null,"EMPLOYEE SUCCESSFULLY ADDED");
                dispose();
