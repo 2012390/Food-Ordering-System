@@ -73,15 +73,18 @@ public class AdminLogin extends javax.swing.JFrame {
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         jTextPane1.setEditable(false);
-        jTextPane1.setBackground(new java.awt.Color(204, 204, 204));
+        jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
         jTextPane1.setBorder(null);
-        jTextPane1.setText("Username");
+        jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextPane1.setText("USERNAME");
+        jTextPane1.setCaretColor(new java.awt.Color(153, 153, 153));
         jScrollPane1.setViewportView(jTextPane1);
 
         jTextPane2.setEditable(false);
-        jTextPane2.setBackground(new java.awt.Color(204, 204, 204));
+        jTextPane2.setBackground(new java.awt.Color(153, 153, 153));
         jTextPane2.setBorder(null);
-        jTextPane2.setText("Password");
+        jTextPane2.setForeground(new java.awt.Color(0, 0, 0));
+        jTextPane2.setText("PASSWORD");
         jScrollPane2.setViewportView(jTextPane2);
 
         jButton1.setText("LOGIN");
@@ -106,7 +109,7 @@ public class AdminLogin extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, Short.MAX_VALUE)
+                .addGap(28, 28, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -119,7 +122,7 @@ public class AdminLogin extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(58, 58, 58)
@@ -184,7 +187,10 @@ public class AdminLogin extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        dispose();
+       
+        Menu m=new Menu();
+       m.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
