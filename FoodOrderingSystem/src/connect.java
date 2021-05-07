@@ -1,6 +1,7 @@
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.Statement;
 
 /*
@@ -24,4 +25,9 @@ public class connect {
         } catch (Exception e) {
             e.printStackTrace();
         }
-}}
+}
+
+    PreparedStatement prepareStatement(String employee) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
