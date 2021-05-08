@@ -14,37 +14,6 @@ import javax.swing.table.DefaultTableModel;
  * @author MUHAMMAD FASEEH
  */
 public class ViewStaff extends javax.swing.JFrame {
-private String name,id,age,designation,salary;
-public String getName(){
-    return name;
-}
-public String getId(){
-    return id;
-}
-public String getAge(){
-    return age;
-}
-public String getDesignation(){
-    return designation;
-}
-public String getSalary(){
-    return salary;
-}
-public void setName(String name){
-    this.name=name;
-}
-public void setId(String id){
-    this.id=id;
-}
-public void setAge(String age){
-    this.age=age;
-}
-public void setDesignation(String designation){
-    this.designation=designation;
-}
-public void setSalary(String salary){
-    this.salary=salary;
-}
 
     /**
      * Creates new form ViewStaff
@@ -68,6 +37,7 @@ public void setSalary(String salary){
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HUNGRY FOODIES");
@@ -105,6 +75,14 @@ public void setSalary(String salary){
         });
 
         jButton2.setText("BACK");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/View Staff.PNG"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -121,14 +99,20 @@ public void setSalary(String salary){
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(116, 116, 116))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(226, 226, 226)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(87, 87, 87)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel2)
+                .addGap(41, 41, 41)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -151,6 +135,7 @@ public void setSalary(String salary){
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+         Employee e=new Employee();
         try{
             
         
@@ -158,12 +143,12 @@ public void setSalary(String salary){
         String sql="select * from Employee";
         ResultSet rs=c.s.executeQuery(sql);
         while(rs.next()){
-            name=rs.getString("NAME");
-            id=rs.getString("ID");
-            age=rs.getString("AGE");
-            designation=rs.getString("DESIGNATION");
-            salary=rs.getString("SALARY");
-            String staff[]={name,id,age,designation,salary};
+            e.setName(rs.getString("NAME"));
+            e.setId(rs.getString("ID"));
+            e.setAge(rs.getString("AGE"));
+            e.setDesignation(rs.getString("DESIGNATION"));
+            e.setSalary(rs.getString("SALARY"));
+            String staff[]={e.getName(),e.getId(),e.getAge(),e.getDesignation(),e.getSalary()};
               DefaultTableModel tb1Model=(DefaultTableModel)jTable2.getModel();
         tb1Model.addRow(staff);
         }
@@ -172,6 +157,13 @@ public void setSalary(String salary){
       
     }//GEN-LAST:event_jButton1ActionPerformed
     }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        AdminControls ac=new AdminControls();
+        ac.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -211,6 +203,7 @@ public void setSalary(String salary){
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;

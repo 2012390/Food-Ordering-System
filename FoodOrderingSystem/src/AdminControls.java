@@ -152,6 +152,9 @@ public class AdminControls extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        dispose();
+        DeleteAndUpdateStaff daus=new DeleteAndUpdateStaff();
+        daus.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -171,8 +174,8 @@ public class AdminControls extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         dispose();
-        Menu m=new Menu();
-        m.setVisible(true);
+        MainMenu mm=new MainMenu();
+        mm.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

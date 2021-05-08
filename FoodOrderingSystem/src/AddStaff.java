@@ -15,37 +15,6 @@ import javax.swing.JOptionPane;
  * @author MUHAMMAD FASEEH
  */
 public class AddStaff extends javax.swing.JFrame {
-private String name,id,age,designation,salary;
-public String getName(){
-    return name;
-}
-public String getId(){
-    return id;
-}
-public String getAge(){
-    return age;
-}
-public String getDesignation(){
-    return designation;
-}
-public String getSalary(){
-    return salary;
-}
-public void setName(String name){
-    this.name=name;
-}
-public void setId(String id){
-    this.id=id;
-}
-public void setAge(String age){
-    this.age=age;
-}
-public void setDesignation(String designation){
-    this.designation=designation;
-}
-public void setSalary(String salary){
-    this.salary=salary;
-}
     /**
      * Creates new form AddStaff
      */
@@ -228,21 +197,24 @@ public void setSalary(String salary){
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        name=jTextField1.getText();
-                id=jTextField2.getText();
-                age=jTextField3.getText();
-                designation=jTextField4.getText();
-                salary=jTextField5.getText(); 
+        
+        Employee e=new Employee();
+        
+        e.setName(jTextField1.getText());
+             e.setId(jTextField2.getText());
+                e.setAge(jTextField3.getText());
+               e.setDesignation(jTextField4.getText());
+                e.setSalary(jTextField5.getText()); 
               try{
                     connect c2=new connect();
-                    String employee = "insert into Employee values('"+name+"','"+id+"','"+age+"','"+designation+"','"+salary+"')";
+                    String employee = "insert into Employee values('"+e.getName()+"','"+e.getId()+"','"+e.getAge()+"','"+e.getDesignation()+"','"+e.getSalary()+"')";
                c2.s.executeUpdate(employee);
                JOptionPane.showMessageDialog(null,"EMPLOYEE SUCCESSFULLY ADDED");
                dispose();
             AdminControls ac1 = new AdminControls();   
             ac1.setVisible(true);
                   } catch (Exception ee) {
-                System.out.println("THE ERROR IS:"+ee);
+                 JOptionPane.showMessageDialog(null,ee);
             
                 }
                 
