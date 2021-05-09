@@ -65,9 +65,11 @@ public class Welcome extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/hungry foodies.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/oop project credentials.PNG"))); // NOI18N
         jLabel3.setText("jLabel3");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

@@ -48,7 +48,9 @@ public class AdminControls extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/hungry foodies.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton1.setText("ADD STAFF");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +58,7 @@ public class AdminControls extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton2.setText("VIEW STAFF");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,8 +66,10 @@ public class AdminControls extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton3.setText("ALL ORDERS");
 
+        jButton4.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton4.setText("DELETE STAFF");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,13 +79,17 @@ public class AdminControls extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/Staff.PNG"))); // NOI18N
         jLabel2.setText("jLabel2");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/Orders.PNG"))); // NOI18N
         jLabel3.setText("jLabel3");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton5.setText("DELETE ORDER");
 
-        jButton6.setText("MAIN MENU");
+        jButton6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jButton6.setText("LOG OUT");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -111,7 +120,7 @@ public class AdminControls extends javax.swing.JFrame {
                             .addComponent(jButton5)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3))))
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,7 +140,7 @@ public class AdminControls extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addContainerGap())
         );
@@ -174,8 +183,8 @@ public class AdminControls extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         dispose();
-        MainMenu mm=new MainMenu();
-        mm.setVisible(true);
+        AdminLogin al=new AdminLogin();
+        al.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

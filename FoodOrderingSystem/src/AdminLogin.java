@@ -48,12 +48,14 @@ public class AdminLogin extends javax.swing.JFrame {
         setLocation(new java.awt.Point(500, 250));
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/hungry foodies.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/Adminlogin.PNG"))); // NOI18N
         jLabel2.setText("jLabel2");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField1.setToolTipText("");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +77,7 @@ public class AdminLogin extends javax.swing.JFrame {
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
         jTextPane1.setBorder(null);
+        jTextPane1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane1.setText("USERNAME");
         jTextPane1.setCaretColor(new java.awt.Color(153, 153, 153));
@@ -83,10 +86,12 @@ public class AdminLogin extends javax.swing.JFrame {
         jTextPane2.setEditable(false);
         jTextPane2.setBackground(new java.awt.Color(153, 153, 153));
         jTextPane2.setBorder(null);
+        jTextPane2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane2.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane2.setText("PASSWORD");
         jScrollPane2.setViewportView(jTextPane2);
 
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton1.setText("LOGIN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +99,7 @@ public class AdminLogin extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton2.setText("EXIT");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +109,7 @@ public class AdminLogin extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/admin.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

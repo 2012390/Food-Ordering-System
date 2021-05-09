@@ -1,7 +1,3 @@
-
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -223,8 +219,8 @@ public class AddStaff extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         dispose();
-       AdminControls ac2= new AdminControls();
-       ac2.setVisible(true);
+       AdminControls ac= new AdminControls();
+       ac.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
