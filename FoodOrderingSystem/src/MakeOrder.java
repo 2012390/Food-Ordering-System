@@ -6,12 +6,12 @@
 
 /**
  *
- * @author MUHAMMAD FASEEH
+ * @author Ghazi
  */
 public class MakeOrder extends javax.swing.JFrame {
 
     /**
-     * Creates new form MakeOrder
+     * Creates new form MenuList
      */
     public MakeOrder() {
         initComponents();
@@ -26,21 +26,511 @@ public class MakeOrder extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel14 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        CSQuantityText = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        ZingerQuantityText = new javax.swing.JTextField();
+        CBQuantityText = new javax.swing.JTextField();
+        BBQuantityText = new javax.swing.JTextField();
+        BQuantityText = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        ZPrice = new javax.swing.JTextField();
+        CBPrice = new javax.swing.JTextField();
+        BBPrice = new javax.swing.JTextField();
+        BPrice = new javax.swing.JTextField();
+        CSPrice = new javax.swing.JTextField();
+        jButton12 = new javax.swing.JButton();
+        ChangeText = new javax.swing.JTextField();
+        EnteredCashText = new javax.swing.JTextField();
+        CalculateText = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel14.setText("Entered Cash");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("HUNGRY FOODIES");
+        setLocation(new java.awt.Point(500, 150));
+
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setLayout(null);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/hungry foodies.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(100, 0, 300, 70);
+
+        CSQuantityText.setBackground(new java.awt.Color(153, 153, 153));
+        CSQuantityText.setText("0");
+        CSQuantityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CSQuantityTextActionPerformed(evt);
+            }
+        });
+        CSQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                CBQuantityTextKeyReleased(evt);
+            }
+        });
+        jPanel1.add(CSQuantityText);
+        CSQuantityText.setBounds(280, 360, 80, 30);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("5");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(30, 370, 80, 17);
+
+        ZingerQuantityText.setBackground(new java.awt.Color(153, 153, 153));
+        ZingerQuantityText.setText("0");
+        ZingerQuantityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZingerQuantityTextActionPerformed(evt);
+            }
+        });
+        ZingerQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                CBQuantityTextKeyReleased(evt);
+            }
+        });
+        jPanel1.add(ZingerQuantityText);
+        ZingerQuantityText.setBounds(280, 200, 80, 30);
+
+        CBQuantityText.setBackground(new java.awt.Color(153, 153, 153));
+        CBQuantityText.setText("0");
+        CBQuantityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBQuantityTextActionPerformed(evt);
+            }
+        });
+        CBQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                CBQuantityTextKeyReleased(evt);
+            }
+        });
+        jPanel1.add(CBQuantityText);
+        CBQuantityText.setBounds(280, 240, 80, 30);
+
+        BBQuantityText.setBackground(new java.awt.Color(153, 153, 153));
+        BBQuantityText.setText("0");
+        BBQuantityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BBQuantityTextActionPerformed(evt);
+            }
+        });
+        BBQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                CBQuantityTextKeyReleased(evt);
+            }
+        });
+        jPanel1.add(BBQuantityText);
+        BBQuantityText.setBounds(280, 280, 80, 30);
+
+        BQuantityText.setBackground(new java.awt.Color(153, 153, 153));
+        BQuantityText.setText("0");
+        BQuantityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BQuantityTextActionPerformed(evt);
+            }
+        });
+        BQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                CBQuantityTextKeyReleased(evt);
+            }
+        });
+        jPanel1.add(BQuantityText);
+        BQuantityText.setBounds(280, 320, 80, 30);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Price");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(400, 170, 80, 20);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Item No");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(10, 170, 80, 20);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("1");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(30, 210, 80, 17);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("2");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(30, 250, 80, 17);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("3");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(30, 290, 80, 17);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("4");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(30, 330, 80, 17);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Quantity");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(280, 170, 100, 20);
+
+        ZPrice.setEditable(false);
+        ZPrice.setBackground(new java.awt.Color(153, 153, 153));
+        ZPrice.setText("230");
+        ZPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZPriceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ZPrice);
+        ZPrice.setBounds(390, 200, 80, 30);
+
+        CBPrice.setEditable(false);
+        CBPrice.setBackground(new java.awt.Color(153, 153, 153));
+        CBPrice.setText("200");
+        CBPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBPriceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CBPrice);
+        CBPrice.setBounds(390, 240, 80, 30);
+
+        BBPrice.setEditable(false);
+        BBPrice.setBackground(new java.awt.Color(153, 153, 153));
+        BBPrice.setText("210");
+        BBPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BBPriceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BBPrice);
+        BBPrice.setBounds(390, 280, 80, 30);
+
+        BPrice.setEditable(false);
+        BPrice.setBackground(new java.awt.Color(153, 153, 153));
+        BPrice.setText("230");
+        BPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BPriceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BPrice);
+        BPrice.setBounds(390, 320, 80, 30);
+
+        CSPrice.setEditable(false);
+        CSPrice.setBackground(new java.awt.Color(153, 153, 153));
+        CSPrice.setText("250");
+        CSPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CSPriceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CSPrice);
+        CSPrice.setBounds(390, 360, 80, 30);
+
+        jButton12.setBackground(new java.awt.Color(102, 102, 102));
+        jButton12.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jButton12.setText("CALCULATE");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton12);
+        jButton12.setBounds(110, 400, 140, 30);
+
+        ChangeText.setEditable(false);
+        ChangeText.setBackground(new java.awt.Color(153, 153, 153));
+        ChangeText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChangeTextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ChangeText);
+        ChangeText.setBounds(280, 470, 190, 30);
+
+        EnteredCashText.setBackground(new java.awt.Color(153, 153, 153));
+        EnteredCashText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnteredCashTextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EnteredCashText);
+        EnteredCashText.setBounds(280, 440, 190, 30);
+
+        CalculateText.setEditable(false);
+        CalculateText.setBackground(new java.awt.Color(153, 153, 153));
+        CalculateText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalculateTextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CalculateText);
+        CalculateText.setBounds(280, 400, 190, 30);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Item");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(150, 170, 50, 20);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("Clubsandwich");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(110, 360, 150, 30);
+
+        jButton13.setBackground(new java.awt.Color(102, 102, 102));
+        jButton13.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jButton13.setText("CHANGE");
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton13MouseClicked(evt);
+            }
+        });
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton13);
+        jButton13.setBounds(110, 470, 140, 30);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Entered Cash");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(110, 440, 130, 30);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Zinger Burger");
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(110, 200, 130, 30);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("Chicken Burger");
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(110, 240, 150, 30);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Beef Burger");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(110, 280, 150, 30);
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel20.setText("Broast");
+        jPanel1.add(jLabel20);
+        jLabel20.setBounds(110, 320, 150, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CSQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CSQuantityTextActionPerformed
+     
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CSQuantityTextActionPerformed
+
+    private void ZingerQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZingerQuantityTextActionPerformed
+        // TODO add your handling code here:
+        try{
+            Integer.parseInt(ZingerQuantityText.getText());
+        }catch(Exception e){
+            ZingerQuantityText.setText("");
+        }
+        
+    }//GEN-LAST:event_ZingerQuantityTextActionPerformed
+
+    private void CBQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBQuantityTextActionPerformed
+
+    }//GEN-LAST:event_CBQuantityTextActionPerformed
+
+    private void BBQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBQuantityTextActionPerformed
+try{
+            Integer.parseInt(BBQuantityText.getText());
+        }catch(Exception e){
+            BBQuantityText.setText("");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_BBQuantityTextActionPerformed
+
+    private void BQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BQuantityTextActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BQuantityTextActionPerformed
+
+    private void ZPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ZPriceActionPerformed
+
+    private void CBPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBPriceActionPerformed
+
+    private void BBPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BBPriceActionPerformed
+
+    private void BPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BPriceActionPerformed
+
+    private void CSPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CSPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CSPriceActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+
+        int value1 = Integer.parseInt(CSQuantityText.getText());
+        int value2 = Integer.parseInt(ZingerQuantityText.getText());
+        int value3 = Integer.parseInt(BBQuantityText.getText());
+        int value4 = Integer.parseInt(CBQuantityText.getText());
+        int value5 = Integer.parseInt(BQuantityText.getText());
+        int ChickenBurgerPrice = Integer.parseInt(CBPrice.getText());
+        int BeefBurgerPrice = Integer.parseInt(BBPrice.getText());
+        int ClubSandwichPrice = Integer.parseInt(CSPrice.getText());
+        int ZingerBurgerPrice = Integer.parseInt(ZPrice.getText());
+        int BroastPrice = Integer.parseInt(BPrice.getText());
+        CalculateText.setText(Integer.toString( value1 * ClubSandwichPrice + value2 *ZingerBurgerPrice  + value3 *BeefBurgerPrice + value4 *ChickenBurgerPrice + value5 *BroastPrice));
+        
+//        int value6 = Integer.parseInt(jTextField1.getText());
+        
+                
+                
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void ChangeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeTextActionPerformed
+
+        int EnteredCash = Integer.parseInt(EnteredCashText.getText());
+        int Calculate = Integer.parseInt(CalculateText.getText());
+        int change = EnteredCash - Calculate;
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ChangeTextActionPerformed
+
+    private void EnteredCashTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnteredCashTextActionPerformed
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EnteredCashTextActionPerformed
+
+    private void CalculateTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CalculateTextActionPerformed
+
+    private void CBQuantityTextKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CBQuantityTextKeyReleased
+
+        // TODO add your handling code here:
+        try{
+        Integer.parseInt(ZingerQuantityText.getText());   
+        }
+        catch(Exception e){
+            ZingerQuantityText.setText("");
+        }
+         try{
+        Integer.parseInt(BBQuantityText.getText());   
+        }
+        catch(Exception e){
+            BBQuantityText.setText("");
+        }
+          try{
+        Integer.parseInt(CBQuantityText.getText());   
+        }
+        catch(Exception e){
+            CBQuantityText.setText("");
+        }
+            try{
+        Integer.parseInt(CSQuantityText.getText());   
+        }
+        catch(Exception e){
+            CSQuantityText.setText("");
+        }
+              try{
+        Integer.parseInt(BQuantityText.getText());   
+        }
+        catch(Exception e){
+            BQuantityText.setText("");
+        }
+         
+         
+            
+         
+
+    }//GEN-LAST:event_CBQuantityTextKeyReleased
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12MouseClicked
+
+    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13MouseClicked
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        
+        int CalculatedAmount = Integer.parseInt(CalculateText.getText());
+        int EnteredCash = Integer.parseInt(EnteredCashText.getText()); 
+        
+        int Change = EnteredCash - CalculatedAmount ; 
+
+       if(Change >= 0){
+        ChangeText.setText(Integer.toString(Change));
+       
+       }
+       else{
+       ChangeText.setText("Insufficient Cash.");
+       }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +568,38 @@ public class MakeOrder extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField BBPrice;
+    private javax.swing.JTextField BBQuantityText;
+    private javax.swing.JTextField BPrice;
+    private javax.swing.JTextField BQuantityText;
+    private javax.swing.JTextField CBPrice;
+    private javax.swing.JTextField CBQuantityText;
+    private javax.swing.JTextField CSPrice;
+    private javax.swing.JTextField CSQuantityText;
+    private javax.swing.JTextField CalculateText;
+    private javax.swing.JTextField ChangeText;
+    private javax.swing.JTextField EnteredCashText;
+    private javax.swing.JTextField ZPrice;
+    private javax.swing.JTextField ZingerQuantityText;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
