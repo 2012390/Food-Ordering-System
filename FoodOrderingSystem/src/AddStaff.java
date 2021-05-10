@@ -206,9 +206,11 @@ public class AddStaff extends javax.swing.JFrame {
                     String employee = "insert into Employee values('"+e.getName()+"','"+e.getId()+"','"+e.getAge()+"','"+e.getDesignation()+"','"+e.getSalary()+"')";
                c2.s.executeUpdate(employee);
                JOptionPane.showMessageDialog(null,"EMPLOYEE SUCCESSFULLY ADDED");
-               dispose();
-            AdminControls ac1 = new AdminControls();   
-            ac1.setVisible(true);
+              jTextField1.setText("");
+               jTextField2.setText("");
+                jTextField3.setText("");
+                 jTextField4.setText("");
+                  jTextField5.setText("");
                   } catch (Exception ee) {
                  JOptionPane.showMessageDialog(null,ee);
             

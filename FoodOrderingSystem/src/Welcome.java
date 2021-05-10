@@ -44,6 +44,7 @@ public class Welcome extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.setName(""); // NOI18N
 
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("NEXT");
         jButton1.setName("NEXT"); // NOI18N
         jButton1.setOpaque(false);

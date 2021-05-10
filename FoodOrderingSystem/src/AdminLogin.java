@@ -217,7 +217,10 @@ public class AdminLogin extends javax.swing.JFrame {
         }else{
             
                 JOptionPane.showMessageDialog(null, "INVALID LOGIN,TRY AGAIN");
+           jTextField1.setText("");
+           jPasswordField1.setText("");
                
+                   
                
             }
         }catch(Exception e){
