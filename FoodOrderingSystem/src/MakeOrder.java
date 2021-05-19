@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,7 +9,7 @@
 
 /**
  *
- * @author Ghazi
+ * @author Muhammad Faseeh
  */
 public class MakeOrder extends javax.swing.JFrame {
 
@@ -48,17 +51,24 @@ public class MakeOrder extends javax.swing.JFrame {
         BPrice = new javax.swing.JTextField();
         CSPrice = new javax.swing.JTextField();
         jButton12 = new javax.swing.JButton();
-        ChangeText = new javax.swing.JTextField();
-        EnteredCashText = new javax.swing.JTextField();
         CalculateText = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jButton13 = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        NameText = new javax.swing.JTextField();
+        AddressText = new javax.swing.JTextField();
+        PhoneNoText = new javax.swing.JTextField();
+        EmailText = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(204, 204, 204));
@@ -66,7 +76,8 @@ public class MakeOrder extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HUNGRY FOODIES");
-        setLocation(new java.awt.Point(500, 150));
+        setLocation(new java.awt.Point(250, 100));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -76,7 +87,7 @@ public class MakeOrder extends javax.swing.JFrame {
         jLabel3.setText("jLabel3");
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(100, 0, 300, 70);
+        jLabel3.setBounds(340, 0, 300, 70);
 
         CSQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         CSQuantityText.setText("0");
@@ -258,7 +269,8 @@ public class MakeOrder extends javax.swing.JFrame {
 
         jButton12.setBackground(new java.awt.Color(102, 102, 102));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jButton12.setText("CALCULATE");
+        jButton12.setForeground(new java.awt.Color(0, 0, 0));
+        jButton12.setText("TOTAL AMOUNT");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton12MouseClicked(evt);
@@ -271,25 +283,6 @@ public class MakeOrder extends javax.swing.JFrame {
         });
         jPanel1.add(jButton12);
         jButton12.setBounds(110, 400, 140, 30);
-
-        ChangeText.setEditable(false);
-        ChangeText.setBackground(new java.awt.Color(153, 153, 153));
-        ChangeText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ChangeTextActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ChangeText);
-        ChangeText.setBounds(280, 470, 190, 30);
-
-        EnteredCashText.setBackground(new java.awt.Color(153, 153, 153));
-        EnteredCashText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnteredCashTextActionPerformed(evt);
-            }
-        });
-        jPanel1.add(EnteredCashText);
-        EnteredCashText.setBounds(280, 440, 190, 30);
 
         CalculateText.setEditable(false);
         CalculateText.setBackground(new java.awt.Color(153, 153, 153));
@@ -312,28 +305,6 @@ public class MakeOrder extends javax.swing.JFrame {
         jLabel15.setText("Clubsandwich");
         jPanel1.add(jLabel15);
         jLabel15.setBounds(110, 360, 150, 30);
-
-        jButton13.setBackground(new java.awt.Color(102, 102, 102));
-        jButton13.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jButton13.setText("CHANGE");
-        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton13MouseClicked(evt);
-            }
-        });
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton13);
-        jButton13.setBounds(110, 470, 140, 30);
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Entered Cash");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(110, 440, 130, 30);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
@@ -359,15 +330,98 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(jLabel20);
         jLabel20.setBounds(110, 320, 150, 30);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("ORDER DETAILS");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(160, 110, 200, 27);
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel23.setText("Name");
+        jPanel1.add(jLabel23);
+        jLabel23.setBounds(600, 200, 53, 22);
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel21.setText("Address");
+        jPanel1.add(jLabel21);
+        jLabel21.setBounds(600, 240, 71, 22);
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel22.setText("Phone No");
+        jPanel1.add(jLabel22);
+        jLabel22.setBounds(600, 280, 88, 22);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Email");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(600, 320, 49, 22);
+
+        NameText.setBackground(new java.awt.Color(153, 153, 153));
+        NameText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NameTextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NameText);
+        NameText.setBounds(700, 190, 270, 30);
+
+        AddressText.setBackground(new java.awt.Color(153, 153, 153));
+        AddressText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddressTextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(AddressText);
+        AddressText.setBounds(700, 230, 270, 30);
+
+        PhoneNoText.setBackground(new java.awt.Color(153, 153, 153));
+        PhoneNoText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PhoneNoTextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(PhoneNoText);
+        PhoneNoText.setBounds(700, 270, 270, 30);
+
+        EmailText.setBackground(new java.awt.Color(153, 153, 153));
+        EmailText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmailTextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EmailText);
+        EmailText.setBounds(700, 310, 270, 30);
+
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("MAKE ORDER");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(470, 470, 110, 30);
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel24.setText("Customer Information");
+        jPanel1.add(jLabel24);
+        jLabel24.setBounds(610, 110, 248, 27);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -447,21 +501,6 @@ try{
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
-    private void ChangeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeTextActionPerformed
-
-        int EnteredCash = Integer.parseInt(EnteredCashText.getText());
-        int Calculate = Integer.parseInt(CalculateText.getText());
-        int change = EnteredCash - Calculate;
-        
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ChangeTextActionPerformed
-
-    private void EnteredCashTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnteredCashTextActionPerformed
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EnteredCashTextActionPerformed
-
     private void CalculateTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CalculateTextActionPerformed
@@ -510,27 +549,47 @@ try{
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12MouseClicked
 
-    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+    private void NameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13MouseClicked
+    }//GEN-LAST:event_NameTextActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        
-        int CalculatedAmount = Integer.parseInt(CalculateText.getText());
-        int EnteredCash = Integer.parseInt(EnteredCashText.getText()); 
-        
-        int Change = EnteredCash - CalculatedAmount ; 
-
-       if(Change >= 0){
-        ChangeText.setText(Integer.toString(Change));
-       
-       }
-       else{
-       ChangeText.setText("Insufficient Cash.");
-       }
-
+    private void PhoneNoTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PhoneNoTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_PhoneNoTextActionPerformed
+
+    private void AddressTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddressTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddressTextActionPerformed
+
+    private void EmailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmailTextActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here
+        Customer c=new Customer();
+         c.setName(NameText.getText());
+        c.setP_no(PhoneNoText.getText());
+        c.setAddress(AddressText.getText());
+        c.setEmail(EmailText.getText());
+        CalculateText.getText();
+        try{
+            connect c2=new connect();
+            String employee = "insert into customer values('"+c.getName()+"','"+c.getP_no()+"','"+c.getAddress()+"','"+c.getEmail()+"','"+CalculateText.getText()+"')";
+               c2.s.executeUpdate(employee);
+               JOptionPane.showMessageDialog(null,"ORDER CONFIRMED,YOUR ORDER WILL BE DELIVERED WITH 30 MINUTES");
+              NameText.setText("");
+               PhoneNoText.setText("");
+                AddressText.setText("");
+                 EmailText.setText("");
+                 CalculateText.setText("");
+                  } catch (Exception ee) {
+                 JOptionPane.showMessageDialog(null,ee);
+            
+                
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -568,6 +627,7 @@ try{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AddressText;
     private javax.swing.JTextField BBPrice;
     private javax.swing.JTextField BBQuantityText;
     private javax.swing.JTextField BPrice;
@@ -577,25 +637,31 @@ try{
     private javax.swing.JTextField CSPrice;
     private javax.swing.JTextField CSQuantityText;
     private javax.swing.JTextField CalculateText;
-    private javax.swing.JTextField ChangeText;
-    private javax.swing.JTextField EnteredCashText;
+    private javax.swing.JTextField EmailText;
+    private javax.swing.JTextField NameText;
+    private javax.swing.JTextField PhoneNoText;
     private javax.swing.JTextField ZPrice;
     private javax.swing.JTextField ZingerQuantityText;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
