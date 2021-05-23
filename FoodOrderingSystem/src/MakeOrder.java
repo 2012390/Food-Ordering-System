@@ -69,6 +69,9 @@ public class MakeOrder extends javax.swing.JFrame {
         EmailText = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        OrderNumber = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(204, 204, 204));
@@ -271,11 +274,6 @@ public class MakeOrder extends javax.swing.JFrame {
         jButton12.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setText("TOTAL AMOUNT");
-        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton12MouseClicked(evt);
-            }
-        });
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -361,38 +359,18 @@ public class MakeOrder extends javax.swing.JFrame {
         jLabel12.setBounds(600, 320, 49, 22);
 
         NameText.setBackground(new java.awt.Color(153, 153, 153));
-        NameText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NameTextActionPerformed(evt);
-            }
-        });
         jPanel1.add(NameText);
         NameText.setBounds(700, 190, 270, 30);
 
         AddressText.setBackground(new java.awt.Color(153, 153, 153));
-        AddressText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AddressTextActionPerformed(evt);
-            }
-        });
         jPanel1.add(AddressText);
         AddressText.setBounds(700, 230, 270, 30);
 
         PhoneNoText.setBackground(new java.awt.Color(153, 153, 153));
-        PhoneNoText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PhoneNoTextActionPerformed(evt);
-            }
-        });
         jPanel1.add(PhoneNoText);
         PhoneNoText.setBounds(700, 270, 270, 30);
 
         EmailText.setBackground(new java.awt.Color(153, 153, 153));
-        EmailText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmailTextActionPerformed(evt);
-            }
-        });
         jPanel1.add(EmailText);
         EmailText.setBounds(700, 310, 270, 30);
 
@@ -405,13 +383,37 @@ public class MakeOrder extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(470, 470, 110, 30);
+        jButton1.setBounds(560, 490, 110, 30);
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("Customer Information");
         jPanel1.add(jLabel24);
         jLabel24.setBounds(610, 110, 248, 27);
+
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setText("BACK");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(350, 490, 110, 30);
+
+        OrderNumber.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.add(OrderNumber);
+        OrderNumber.setBounds(280, 439, 190, 30);
+
+        jButton3.setText(" ORDER NUMBER");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(120, 440, 130, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -545,37 +547,18 @@ try{
 
     }//GEN-LAST:event_CBQuantityTextKeyReleased
 
-    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12MouseClicked
-
-    private void NameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NameTextActionPerformed
-
-    private void PhoneNoTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PhoneNoTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PhoneNoTextActionPerformed
-
-    private void AddressTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddressTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AddressTextActionPerformed
-
-    private void EmailTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmailTextActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here
-        Customer c=new Customer();
+        Order c=new Order();
          c.setName(NameText.getText());
         c.setP_no(PhoneNoText.getText());
         c.setAddress(AddressText.getText());
         c.setEmail(EmailText.getText());
-        CalculateText.getText();
+        c.setTotal(CalculateText.getText());
+        c.setOrderNumber(OrderNumber.getText());
         try{
             connect c2=new connect();
-            String employee = "insert into customer values('"+c.getName()+"','"+c.getP_no()+"','"+c.getAddress()+"','"+c.getEmail()+"','"+CalculateText.getText()+"')";
+            String employee = "insert into ordering values('"+c.getOrderNumber()+"','"+c.getName()+"','"+c.getP_no()+"','"+c.getAddress()+"','"+c.getEmail()+"','"+c.getTotal()+"')";
                c2.s.executeUpdate(employee);
                JOptionPane.showMessageDialog(null,"ORDER CONFIRMED,YOUR ORDER WILL BE DELIVERED WITH 30 MINUTES");
               NameText.setText("");
@@ -583,6 +566,7 @@ try{
                 AddressText.setText("");
                  EmailText.setText("");
                  CalculateText.setText("");
+                 OrderNumber.setText("");
                   } catch (Exception ee) {
                  JOptionPane.showMessageDialog(null,ee);
             
@@ -590,6 +574,27 @@ try{
             
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        CustomerControls cc=new CustomerControls();
+        cc.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+      int min = 1;
+      int max = 1000;
+        
+      //Generate random int value from 50 to 100 
+      System.out.println("Random value in int from "+min+" to "+max+ ":");
+      int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+        String number= String.valueOf(random_int);
+        Order c=new Order();
+       OrderNumber.setText(number);
+      
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -639,11 +644,14 @@ try{
     private javax.swing.JTextField CalculateText;
     private javax.swing.JTextField EmailText;
     private javax.swing.JTextField NameText;
+    private javax.swing.JTextField OrderNumber;
     private javax.swing.JTextField PhoneNoText;
     private javax.swing.JTextField ZPrice;
     private javax.swing.JTextField ZingerQuantityText;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

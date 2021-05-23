@@ -8,8 +8,11 @@
  *
  * @author MUHAMMAD FASEEH
  */
-public class Customer {
-    private String name,email,p_no,address;
+public class Order{
+    private String orderNumber,name,email,p_no,address,total;
+     public String getOrderNumber(){
+        return orderNumber;
+    }
     public String getName(){
         return name;
     }
@@ -22,6 +25,12 @@ public class Customer {
     public String getAddress(){
         return address;
     }
+    public String getTotal(){
+        return total;
+    }
+     public void setOrderNumber(String orderNumber){
+        this.orderNumber=orderNumber;
+    }
     public void setName(String name){
         this.name=name;
     }
@@ -33,5 +42,8 @@ public class Customer {
     }
     public void setAddress(String address){
         this.address=address;
+    }
+    public void setTotal(String total){
+        this.total=total;
     }
 }
