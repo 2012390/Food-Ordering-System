@@ -270,7 +270,7 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(CSPrice);
         CSPrice.setBounds(390, 360, 80, 30);
 
-        jButton12.setBackground(new java.awt.Color(102, 102, 102));
+        jButton12.setBackground(new java.awt.Color(153, 153, 153));
         jButton12.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton12.setForeground(new java.awt.Color(0, 0, 0));
         jButton12.setText("TOTAL AMOUNT");
@@ -280,7 +280,7 @@ public class MakeOrder extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton12);
-        jButton12.setBounds(110, 400, 140, 30);
+        jButton12.setBounds(120, 400, 130, 30);
 
         CalculateText.setEditable(false);
         CalculateText.setBackground(new java.awt.Color(153, 153, 153));
@@ -406,6 +406,8 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(OrderNumber);
         OrderNumber.setBounds(280, 439, 190, 30);
 
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText(" ORDER NUMBER");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

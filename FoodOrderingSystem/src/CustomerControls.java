@@ -29,8 +29,6 @@ public class CustomerControls extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
 
@@ -55,12 +53,6 @@ public class CustomerControls extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jButton2.setText("VIEW ORDERS");
-
-        jButton3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jButton3.setText("DELETE ORDER");
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/Customer Controls.PNG"))); // NOI18N
         jLabel2.setText("jLabel2");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -84,15 +76,13 @@ public class CustomerControls extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
-                    .addComponent(jButton1)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(11, 11, 11))
-                        .addComponent(jButton2))
-                    .addComponent(jButton3))
-                .addGap(168, 168, 168))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(176, 176, 176))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,15 +90,11 @@ public class CustomerControls extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(35, 35, 35)
                 .addComponent(jLabel2)
-                .addGap(38, 38, 38)
+                .addGap(65, 65, 65)
                 .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 84, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,8 +162,6 @@ public class CustomerControls extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
