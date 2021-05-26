@@ -68,7 +68,6 @@ public class AdminControls extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton3.setText("VIEW ORDERS");
-        jButton3.setActionCommand("VIEW ORDERS");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -93,6 +92,11 @@ public class AdminControls extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton5.setText("DELETE ORDER");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton6.setText("LOG OUT");
@@ -199,6 +203,13 @@ public class AdminControls extends javax.swing.JFrame {
         ViewOrder vo=new ViewOrder();
         vo.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        DeleteOrder d=new DeleteOrder();
+        d.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
