@@ -1,4 +1,5 @@
 
+import com.email.durgesh.Email;
 import javax.swing.JOptionPane;
 
 /*
@@ -12,14 +13,12 @@ import javax.swing.JOptionPane;
  * @author Muhammad Faseeh
  */
 public class MakeOrder extends javax.swing.JFrame {
-
     /**
      * Creates new form MenuList
      */
     public MakeOrder() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -94,11 +93,6 @@ public class MakeOrder extends javax.swing.JFrame {
 
         CSQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         CSQuantityText.setText("0");
-        CSQuantityText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CSQuantityTextActionPerformed(evt);
-            }
-        });
         CSQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 CBQuantityTextKeyReleased(evt);
@@ -115,11 +109,6 @@ public class MakeOrder extends javax.swing.JFrame {
 
         ZingerQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         ZingerQuantityText.setText("0");
-        ZingerQuantityText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ZingerQuantityTextActionPerformed(evt);
-            }
-        });
         ZingerQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 CBQuantityTextKeyReleased(evt);
@@ -130,11 +119,6 @@ public class MakeOrder extends javax.swing.JFrame {
 
         CBQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         CBQuantityText.setText("0");
-        CBQuantityText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBQuantityTextActionPerformed(evt);
-            }
-        });
         CBQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 CBQuantityTextKeyReleased(evt);
@@ -145,11 +129,6 @@ public class MakeOrder extends javax.swing.JFrame {
 
         BBQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         BBQuantityText.setText("0");
-        BBQuantityText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BBQuantityTextActionPerformed(evt);
-            }
-        });
         BBQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 CBQuantityTextKeyReleased(evt);
@@ -160,11 +139,6 @@ public class MakeOrder extends javax.swing.JFrame {
 
         BQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         BQuantityText.setText("0");
-        BQuantityText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BQuantityTextActionPerformed(evt);
-            }
-        });
         BQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 CBQuantityTextKeyReleased(evt);
@@ -218,55 +192,30 @@ public class MakeOrder extends javax.swing.JFrame {
         ZPrice.setEditable(false);
         ZPrice.setBackground(new java.awt.Color(153, 153, 153));
         ZPrice.setText("230");
-        ZPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ZPriceActionPerformed(evt);
-            }
-        });
         jPanel1.add(ZPrice);
         ZPrice.setBounds(390, 200, 80, 30);
 
         CBPrice.setEditable(false);
         CBPrice.setBackground(new java.awt.Color(153, 153, 153));
         CBPrice.setText("200");
-        CBPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBPriceActionPerformed(evt);
-            }
-        });
         jPanel1.add(CBPrice);
         CBPrice.setBounds(390, 240, 80, 30);
 
         BBPrice.setEditable(false);
         BBPrice.setBackground(new java.awt.Color(153, 153, 153));
         BBPrice.setText("210");
-        BBPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BBPriceActionPerformed(evt);
-            }
-        });
         jPanel1.add(BBPrice);
         BBPrice.setBounds(390, 280, 80, 30);
 
         BPrice.setEditable(false);
         BPrice.setBackground(new java.awt.Color(153, 153, 153));
         BPrice.setText("230");
-        BPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BPriceActionPerformed(evt);
-            }
-        });
         jPanel1.add(BPrice);
         BPrice.setBounds(390, 320, 80, 30);
 
         CSPrice.setEditable(false);
         CSPrice.setBackground(new java.awt.Color(153, 153, 153));
         CSPrice.setText("250");
-        CSPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CSPriceActionPerformed(evt);
-            }
-        });
         jPanel1.add(CSPrice);
         CSPrice.setBounds(390, 360, 80, 30);
 
@@ -431,58 +380,6 @@ public class MakeOrder extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CSQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CSQuantityTextActionPerformed
-     
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CSQuantityTextActionPerformed
-
-    private void ZingerQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZingerQuantityTextActionPerformed
-        // TODO add your handling code here:
-        try{
-            Integer.parseInt(ZingerQuantityText.getText());
-        }catch(Exception e){
-            ZingerQuantityText.setText("");
-        }
-        
-    }//GEN-LAST:event_ZingerQuantityTextActionPerformed
-
-    private void CBQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBQuantityTextActionPerformed
-
-    }//GEN-LAST:event_CBQuantityTextActionPerformed
-
-    private void BBQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBQuantityTextActionPerformed
-try{
-            Integer.parseInt(BBQuantityText.getText());
-        }catch(Exception e){
-            BBQuantityText.setText("");
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_BBQuantityTextActionPerformed
-
-    private void BQuantityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BQuantityTextActionPerformed
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BQuantityTextActionPerformed
-
-    private void ZPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ZPriceActionPerformed
-
-    private void CBPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CBPriceActionPerformed
-
-    private void BBPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BBPriceActionPerformed
-
-    private void BPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BPriceActionPerformed
-
-    private void CSPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CSPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CSPriceActionPerformed
-
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
 
         int value1 = Integer.parseInt(CSQuantityText.getText());
@@ -569,11 +466,21 @@ try{
                  EmailText.setText("");
                  CalculateText.setText("");
                  OrderNumber.setText("");
-                  } catch (Exception ee) {
-                 JOptionPane.showMessageDialog(null,ee);
+                Email email = new Email("hungryfoodiesproject@gmail.com", "szabist1"); 
             
-                
+            email.setFrom("hungryfoodiesproject@gmail.com", "Hungry Foodies");
+
+            email.setSubject("Order Confirmed!");
+
+            email.setContent("Thank you "+ c.getName() +" for ordering your food! Hope you will enjoy our food."+"\n Your Total bill is "+c.getTotal()                    + "<footer>\n <p>Hungry Foodies <br> Address: R-24, North Nazimabad Food Street, Karachi. <br>Phone No: 03320234043</p> "
+                    + "<p><a href=\"mailto:hungryfoodiesproject@gmail.com\">HUNGRY FOODIES</a></p>", "text/html");
             
+            email.addRecipient(c.getEmail());
+            
+            email.send();
+                  }
+        catch (Exception ee) {
+                 JOptionPane.showMessageDialog(null,ee);                       
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
