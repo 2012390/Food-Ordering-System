@@ -81,7 +81,7 @@ public class MakeOrder extends javax.swing.JFrame {
         setLocation(new java.awt.Point(250, 100));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(null);
 
@@ -91,7 +91,6 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(340, 0, 300, 70);
 
-        CSQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         CSQuantityText.setText("0");
         CSQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -107,7 +106,6 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 370, 80, 17);
 
-        ZingerQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         ZingerQuantityText.setText("0");
         ZingerQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -117,7 +115,6 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(ZingerQuantityText);
         ZingerQuantityText.setBounds(280, 200, 80, 30);
 
-        CBQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         CBQuantityText.setText("0");
         CBQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -127,7 +124,6 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(CBQuantityText);
         CBQuantityText.setBounds(280, 240, 80, 30);
 
-        BBQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         BBQuantityText.setText("0");
         BBQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -137,7 +133,6 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(BBQuantityText);
         BBQuantityText.setBounds(280, 280, 80, 30);
 
-        BQuantityText.setBackground(new java.awt.Color(153, 153, 153));
         BQuantityText.setText("0");
         BQuantityText.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -190,31 +185,36 @@ public class MakeOrder extends javax.swing.JFrame {
         jLabel11.setBounds(280, 170, 100, 20);
 
         ZPrice.setEditable(false);
-        ZPrice.setBackground(new java.awt.Color(153, 153, 153));
+        ZPrice.setBackground(new java.awt.Color(255, 255, 255));
         ZPrice.setText("230");
         jPanel1.add(ZPrice);
         ZPrice.setBounds(390, 200, 80, 30);
 
         CBPrice.setEditable(false);
-        CBPrice.setBackground(new java.awt.Color(153, 153, 153));
+        CBPrice.setBackground(new java.awt.Color(255, 255, 255));
         CBPrice.setText("200");
+        CBPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBPriceActionPerformed(evt);
+            }
+        });
         jPanel1.add(CBPrice);
         CBPrice.setBounds(390, 240, 80, 30);
 
         BBPrice.setEditable(false);
-        BBPrice.setBackground(new java.awt.Color(153, 153, 153));
+        BBPrice.setBackground(new java.awt.Color(255, 255, 255));
         BBPrice.setText("210");
         jPanel1.add(BBPrice);
         BBPrice.setBounds(390, 280, 80, 30);
 
         BPrice.setEditable(false);
-        BPrice.setBackground(new java.awt.Color(153, 153, 153));
+        BPrice.setBackground(new java.awt.Color(255, 255, 255));
         BPrice.setText("230");
         jPanel1.add(BPrice);
         BPrice.setBounds(390, 320, 80, 30);
 
         CSPrice.setEditable(false);
-        CSPrice.setBackground(new java.awt.Color(153, 153, 153));
+        CSPrice.setBackground(new java.awt.Color(255, 255, 255));
         CSPrice.setText("250");
         jPanel1.add(CSPrice);
         CSPrice.setBounds(390, 360, 80, 30);
@@ -232,7 +232,7 @@ public class MakeOrder extends javax.swing.JFrame {
         jButton12.setBounds(120, 400, 130, 30);
 
         CalculateText.setEditable(false);
-        CalculateText.setBackground(new java.awt.Color(153, 153, 153));
+        CalculateText.setBackground(new java.awt.Color(255, 255, 255));
         CalculateText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CalculateTextActionPerformed(evt);
@@ -306,23 +306,16 @@ public class MakeOrder extends javax.swing.JFrame {
         jLabel12.setText("Email");
         jPanel1.add(jLabel12);
         jLabel12.setBounds(600, 320, 49, 22);
-
-        NameText.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.add(NameText);
         NameText.setBounds(700, 190, 270, 30);
-
-        AddressText.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.add(AddressText);
         AddressText.setBounds(700, 230, 270, 30);
-
-        PhoneNoText.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.add(PhoneNoText);
         PhoneNoText.setBounds(700, 270, 270, 30);
-
-        EmailText.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.add(EmailText);
         EmailText.setBounds(700, 310, 270, 30);
 
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("MAKE ORDER");
@@ -340,6 +333,7 @@ public class MakeOrder extends javax.swing.JFrame {
         jPanel1.add(jLabel24);
         jLabel24.setBounds(610, 110, 248, 27);
 
+        jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("BACK");
@@ -350,11 +344,10 @@ public class MakeOrder extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
         jButton2.setBounds(350, 490, 110, 30);
-
-        OrderNumber.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.add(OrderNumber);
         OrderNumber.setBounds(280, 439, 190, 30);
 
+        jButton3.setBackground(new java.awt.Color(153, 153, 153));
         jButton3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText(" ORDER NUMBER");
@@ -504,6 +497,10 @@ public class MakeOrder extends javax.swing.JFrame {
        OrderNumber.setText(number);
       
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void CBPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBPriceActionPerformed
 
     /**
      * @param args the command line arguments

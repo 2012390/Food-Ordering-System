@@ -61,7 +61,7 @@ public class DeleteOrder extends javax.swing.JFrame {
         setTitle("HUNGRY FOODIES");
         setLocation(new java.awt.Point(500, 200));
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(255, 102, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/hungry foodies.jpg"))); // NOI18N
@@ -278,8 +278,8 @@ public class DeleteOrder extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         dispose();
-        AdminControls ac=new AdminControls();
-        ac.setVisible(true);
+        ViewOrder vo=new ViewOrder();
+        vo.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

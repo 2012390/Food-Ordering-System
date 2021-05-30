@@ -45,7 +45,7 @@ public class AdminLogin extends javax.swing.JFrame {
         setTitle("HUNGRY FOODIES");
         setLocation(new java.awt.Point(500, 250));
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/hungry foodies.jpg"))); // NOI18N
@@ -204,9 +204,8 @@ public class AdminLogin extends javax.swing.JFrame {
             
         }else{
             
-                JOptionPane.showMessageDialog(null, "INVALID LOGIN,TRY AGAIN");
-           jTextField1.setText("");
-           jPasswordField1.setText("");
+                JOptionPane.showMessageDialog(null, "!!INVALID LOGIN!!\nTHE USERNAME OR PASSWORD IS INCORRECT");
+          
                
                    
                

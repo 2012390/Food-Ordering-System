@@ -37,7 +37,7 @@ public class CustomerControls extends javax.swing.JFrame {
         setLocation(new java.awt.Point(500, 250));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N

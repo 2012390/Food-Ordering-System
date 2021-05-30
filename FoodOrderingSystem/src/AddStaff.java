@@ -52,7 +52,7 @@ public class AddStaff extends javax.swing.JFrame {
         setLocation(new java.awt.Point(500, 250));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/hungry foodies.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -67,24 +67,28 @@ public class AddStaff extends javax.swing.JFrame {
         jTextPane2.setEditable(false);
         jTextPane2.setBackground(new java.awt.Color(153, 153, 153));
         jTextPane2.setBorder(null);
+        jTextPane2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane2.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane2.setText("NAME");
         jScrollPane2.setViewportView(jTextPane2);
 
         jTextPane1.setEditable(false);
         jTextPane1.setBackground(new java.awt.Color(153, 153, 153));
+        jTextPane1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane1.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane1.setText("ID");
         jScrollPane1.setViewportView(jTextPane1);
 
         jTextPane3.setEditable(false);
         jTextPane3.setBackground(new java.awt.Color(153, 153, 153));
+        jTextPane3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane3.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane3.setText("AGE");
         jScrollPane3.setViewportView(jTextPane3);
 
         jTextPane4.setEditable(false);
         jTextPane4.setBackground(new java.awt.Color(153, 153, 153));
+        jTextPane4.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane4.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane4.setText("DESIGNATION");
         jTextPane4.setToolTipText("");
@@ -92,6 +96,7 @@ public class AddStaff extends javax.swing.JFrame {
 
         jTextPane5.setEditable(false);
         jTextPane5.setBackground(new java.awt.Color(153, 153, 153));
+        jTextPane5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         jTextPane5.setForeground(new java.awt.Color(0, 0, 0));
         jTextPane5.setText("SALARY");
         jScrollPane5.setViewportView(jTextPane5);
@@ -124,7 +129,7 @@ public class AddStaff extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                         .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

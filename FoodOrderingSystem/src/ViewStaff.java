@@ -1,6 +1,8 @@
 
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -18,8 +20,30 @@ public class ViewStaff extends javax.swing.JFrame {
     /**
      * Creates new form ViewStaff
      */
+    public void showData(){
+         Employee e=new Employee();
+        try{
+        connect c= new connect();
+        String sql="select * from Employee";
+        ResultSet rs=c.s.executeQuery(sql);
+        while(rs.next()){
+            e.setName(rs.getString("NAME"));
+            e.setId(rs.getString("ID"));
+            e.setAge(rs.getString("AGE"));
+            e.setDesignation(rs.getString("DESIGNATION"));
+            e.setSalary(rs.getString("SALARY"));
+            String staff[]={e.getName(),e.getId(),e.getAge(),e.getDesignation(),e.getSalary()};
+              DefaultTableModel tb1Model=(DefaultTableModel)jTable2.getModel();
+        tb1Model.addRow(staff);
+        }
+    } catch (SQLException ex) {
+        System.out.println("THE ERROR IS"+ex);
+      
+    }
+    }
     public ViewStaff() {
         initComponents();
+        showData();
     }
 
     /**
@@ -43,7 +67,7 @@ public class ViewStaff extends javax.swing.JFrame {
         setTitle("HUNGRY FOODIES");
         setLocation(new java.awt.Point(500, 200));
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -70,7 +94,7 @@ public class ViewStaff extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jButton1.setText("SHOW DATA");
+        jButton1.setText("DELETE/UPDATE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -140,28 +164,11 @@ public class ViewStaff extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         Employee e=new Employee();
-        try{
-            
-        
-        connect c= new connect();
-        String sql="select * from Employee";
-        ResultSet rs=c.s.executeQuery(sql);
-        while(rs.next()){
-            e.setName(rs.getString("NAME"));
-            e.setId(rs.getString("ID"));
-            e.setAge(rs.getString("AGE"));
-            e.setDesignation(rs.getString("DESIGNATION"));
-            e.setSalary(rs.getString("SALARY"));
-            String staff[]={e.getName(),e.getId(),e.getAge(),e.getDesignation(),e.getSalary()};
-              DefaultTableModel tb1Model=(DefaultTableModel)jTable2.getModel();
-        tb1Model.addRow(staff);
-        }
-    } catch (SQLException ex) {
-        System.out.println("THE ERROR IS"+ex);
-      
+        dispose();
+     DeleteAndUpdateStaff daus=new DeleteAndUpdateStaff();
+     daus.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-    }
+   
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         dispose();
