@@ -452,7 +452,7 @@ public class MakeOrder extends javax.swing.JFrame {
             connect c2=new connect();
             String employee = "insert into ordering values('"+c.getOrderNumber()+"','"+c.getName()+"','"+c.getP_no()+"','"+c.getAddress()+"','"+c.getEmail()+"','"+c.getTotal()+"')";
                c2.s.executeUpdate(employee);
-               JOptionPane.showMessageDialog(null,"ORDER CONFIRMED,YOUR ORDER WILL BE DELIVERED WITH 30 MINUTES");
+               JOptionPane.showMessageDialog(null,"!! THANKYOU FOR ORDERING !!\n YOU CAN COLLECT YOUR ORDER WITHIN 30 MINUTES");
               NameText.setText("");
                PhoneNoText.setText("");
                 AddressText.setText("");
