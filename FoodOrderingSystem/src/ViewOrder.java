@@ -89,7 +89,7 @@ public class ViewOrder extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ORDER NUMBER", "NAME", "PHONE NUMBER", "EMAIL", "ADDRESS", "TOTAL AMOUNT"
+                "ORDER NUMBER", "NAME", "PHONE NUMBER", "ADDRESS", "EMAIL", "TOTAL AMOUNT"
             }
         ) {
             Class[] types = new Class [] {

@@ -135,8 +135,8 @@
                     <Column editable="true" title="ORDER NUMBER" type="java.lang.String"/>
                     <Column editable="true" title="NAME" type="java.lang.String"/>
                     <Column editable="true" title="PHONE NUMBER" type="java.lang.String"/>
-                    <Column editable="true" title="EMAIL" type="java.lang.String"/>
                     <Column editable="true" title="ADDRESS" type="java.lang.String"/>
+                    <Column editable="true" title="EMAIL" type="java.lang.String"/>
                     <Column editable="true" title="TOTAL AMOUNT" type="java.lang.String"/>
                   </Table>
                 </Property>

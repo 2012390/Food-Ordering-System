@@ -487,7 +487,7 @@ public class MakeOrder extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
       int min = 1;
-      int max = 1000;
+      int max = 10000;
         
       //Generate random int value from 50 to 100 
       System.out.println("Random value in int from "+min+" to "+max+ ":");
